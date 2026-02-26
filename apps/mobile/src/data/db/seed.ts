@@ -1,0 +1,33 @@
+import { LocalDb } from './index';
+import { getMedications, hydrateMedications } from './repositories/medicationsRepo';
+import { initializeSqliteStore } from './sqliteStore';
+import { hydrateMedicationLogs } from './repositories/medicationsRepo';
+import { hydratePairingState } from './repositories/pairingRepo';
+import { hydrateGameRewardState } from './repositories/gamesRepo';
+import { hydrateCalendarItems } from './repositories/calendarRepo';
+import { hydrateUsers } from './repositories/userRepo';
+import { hydratePatientProfile } from './repositories/patientProfileRepo';
+import { hydrateCareTeam } from './repositories/careTeamRepo';
+import { hydrateAuditLogs } from './repositories/auditLogRepo';
+import { hydrateBrainGameSessions } from './repositories/brainGameSessionRepo';
+import { hydrateWellnessSessionLogs } from './repositories/wellnessSessionLogRepo';
+import { hydrateNutritionViewLogs } from './repositories/nutritionViewLogRepo';
+import { hydrateLocalAuthState } from './repositories/localAuthRepo';
+
+export const seedDb = (_db: LocalDb): void => {
+  initializeSqliteStore();
+  hydrateLocalAuthState();
+  hydrateUsers();
+  hydratePatientProfile();
+  hydrateCareTeam();
+  hydrateAuditLogs();
+  hydrateBrainGameSessions();
+  hydrateWellnessSessionLogs();
+  hydrateNutritionViewLogs();
+  hydrateMedications();
+  getMedications();
+  hydrateCalendarItems();
+  hydrateMedicationLogs();
+  hydratePairingState();
+  hydrateGameRewardState();
+};

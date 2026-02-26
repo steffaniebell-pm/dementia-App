@@ -1,0 +1,26 @@
+# Dementia App Workspace
+
+This workspace currently includes the mobile app in `apps/mobile`.
+
+## Start the mobile app
+
+1. Open a terminal in `Dementia App/apps/mobile`
+2. Run:
+
+```bash
+npm install
+npm start
+```
+
+## Main documentation
+
+- Mobile app docs: `Dementia App/apps/mobile/README.md`
+- QA checklist: `Dementia App/apps/mobile/QA.md`
+- Handoff summary: `Dementia App/apps/mobile/HANDOFF_SUMMARY.md`
+
+## Copy style (quick summary)
+
+- Use plain labels and short button text.
+- Keep one primary action per screen when possible.
+- Use calm, supportive wording and avoid technical UI terms.
+
