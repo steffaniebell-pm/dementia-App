@@ -83,7 +83,7 @@ export const BrainGamesScreen = ({ navigation }: Props) => {
             </View>
             <LargeButton
               label="Start"
-              onPress={() => navigation.navigate('GamePlay')}
+              onPress={() => navigation.navigate('GamePlay', { category })}
               style={{ marginBottom: 0, paddingVertical: 10, paddingHorizontal: 14 }}
             />
           </Card>

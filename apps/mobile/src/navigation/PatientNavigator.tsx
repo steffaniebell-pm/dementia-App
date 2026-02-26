@@ -1,5 +1,6 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { GameCategory } from '../domain/models';
 import { HomeHubScreen } from '../screens/patient/HomeHubScreen';
 import { TodayScreen } from '../screens/patient/TodayScreen';
 import { MedNowScreen } from '../screens/patient/MedNowScreen';
@@ -19,7 +20,7 @@ export type PatientStackParamList = {
   MedNow: undefined;
   MedList: undefined;
   BrainGames: undefined;
-  GamePlay: undefined;
+  GamePlay: { category: GameCategory };
   Wellness: undefined;
   WellnessSessionPlayer: undefined;
   Nutrition: undefined;
