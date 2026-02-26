@@ -24,3 +24,22 @@ npm start
 - Keep one primary action per screen when possible.
 - Use calm, supportive wording and avoid technical UI terms.
 
+## Recent update summary (PR-style)
+
+### Feature: Dementia-friendly jigsaw puzzle in Brain Games
+
+- Added a dedicated puzzle flow when a patient starts **Problem Solving**.
+- Implemented a gentle 2x2 tap-to-swap jigsaw (large tiles, simple instructions, shuffle/reset).
+- Prevented star claiming until puzzle completion for this category.
+- Kept other game categories on the existing generic gameplay flow.
+
+### Navigation and UI wiring
+
+- `GamePlay` now receives selected game category via navigation params.
+- Brain Games start buttons pass category context to gameplay.
+- `LargeButton` now supports a disabled state for accessible action gating.
+
+### Validation
+
+- TypeScript check passed: `npx tsc --noEmit` (exit 0).
+

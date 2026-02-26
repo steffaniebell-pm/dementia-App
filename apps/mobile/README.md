@@ -139,3 +139,11 @@ These utilities are currently used in caregiver management screens and selected 
 3. Add push notifications for medication and schedule reminders.
 4. Add unit tests for `nextActionResolver` and repository edge cases.
 5. Add accessibility audits (screen reader labels, contrast, touch targets).
+
+## Recent Update (PR Summary)
+
+- Added a dementia-friendly 2x2 jigsaw puzzle for the patient Brain Games Problem Solving flow.
+- Problem Solving now opens category-specific gameplay with simple tap-to-swap tiles.
+- Added gentle completion gating so Brain Star claim is enabled after puzzle completion.
+- Kept non-problem-solving game categories on the existing gameplay experience.
+- Validation completed with TypeScript check: `npx tsc --noEmit`.
