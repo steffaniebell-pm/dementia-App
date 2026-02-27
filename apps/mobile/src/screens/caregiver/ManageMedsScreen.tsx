@@ -96,26 +96,26 @@ export const ManageMedsScreen = () => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#F9FAFB' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#B8CEDB' }}>
       <ScrollView contentContainerStyle={{ padding: 16 }}>
         <Header showBrand brandVariant="spark" title="Manage Medications" subtitle="Add and edit schedules" />
-        <Card style={{ backgroundColor: '#EEF2FF' }}>
-          <AccessibilityText style={{ fontSize: 14, color: '#4B5563' }}>Overview</AccessibilityText>
-          <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#111827' }}>
+        <Card style={{ backgroundColor: '#B8CEDB' }}>
+          <AccessibilityText style={{ fontSize: 14, color: '#4D217A' }}>Overview</AccessibilityText>
+          <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#4D217A' }}>
             {`${meds.length} medicine${meds.length === 1 ? '' : 's'}`}
           </AccessibilityText>
-          <AccessibilityText style={{ marginTop: 6, fontSize: 14, color: '#374151' }}>
+          <AccessibilityText style={{ marginTop: 6, fontSize: 14, color: '#4D217A' }}>
             Add, remove, or clear medications as needed.
           </AccessibilityText>
         </Card>
-        <AccessibilityText style={{ marginTop: 6, marginBottom: 10, fontSize: 20, fontWeight: '700', color: '#111827' }}>
+        <AccessibilityText style={{ marginTop: 6, marginBottom: 10, fontSize: 20, fontWeight: '700', color: '#4D217A' }}>
           Quick actions
         </AccessibilityText>
         <LargeButton label="Add Medication" onPress={addMedication} />
         <LargeButton
           label="Clear All Medications"
           onPress={clearMedications}
-          style={{ backgroundColor: '#DC2626' }}
+          style={{ backgroundColor: '#F6E600' }}
         />
         <InlineToast message={toastMessage} />
         {undoAction ? (
@@ -125,20 +125,20 @@ export const ManageMedsScreen = () => {
             <LargeButton label="Undo" onPress={onUndo} style={{ marginTop: 10 }} />
           </Card>
         ) : null}
-        <AccessibilityText style={{ marginTop: 6, marginBottom: 10, fontSize: 20, fontWeight: '700', color: '#111827' }}>
+        <AccessibilityText style={{ marginTop: 6, marginBottom: 10, fontSize: 20, fontWeight: '700', color: '#4D217A' }}>
           Medication list
         </AccessibilityText>
         {meds.map((medication) => (
           <Card key={medication.id} style={{ paddingVertical: 16 }}>
             <AccessibilityText style={{ fontWeight: '700', fontSize: 17 }}>{medication.name}</AccessibilityText>
-            <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#374151' }}>{`${medication.dose} • ${medication.scheduleTime}`}</AccessibilityText>
-            <AccessibilityText style={{ marginTop: 2, fontSize: 12, color: '#6B7280' }}>
+            <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#4D217A' }}>{`${medication.dose} • ${medication.scheduleTime}`}</AccessibilityText>
+            <AccessibilityText style={{ marginTop: 2, fontSize: 12, color: '#4D217A' }}>
               {medication.instructions ?? 'No instructions'}
             </AccessibilityText>
             <LargeButton
               label="Remove Medication"
               onPress={() => deleteMedication(medication.id)}
-              style={{ marginTop: 10, backgroundColor: '#DC2626' }}
+              style={{ marginTop: 10, backgroundColor: '#F6E600' }}
             />
           </Card>
         ))}

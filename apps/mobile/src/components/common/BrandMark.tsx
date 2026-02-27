@@ -22,15 +22,15 @@ export const BrandMark = ({ name = 'CareCompanion', compact = false, variant = '
           width: compact ? 30 : 34,
           height: compact ? 30 : 34,
           borderRadius: compact ? 10 : 12,
-          backgroundColor: '#EEF2FF',
+          backgroundColor: '#B8CEDB',
           alignItems: 'center',
           justifyContent: 'center',
           marginRight: 10,
         }}
       >
-        <AccessibilityText style={{ color: '#4F46E5', fontSize: compact ? 13 : 15, fontWeight: '700' }}>{iconByVariant[variant]}</AccessibilityText>
+        <AccessibilityText style={{ color: '#8A00E5', fontSize: compact ? 13 : 15, fontWeight: '700' }}>{iconByVariant[variant]}</AccessibilityText>
       </View>
-      <AccessibilityText style={{ color: '#312E81', fontSize: compact ? 15 : 17, fontWeight: '700' }}>
+      <AccessibilityText style={{ color: '#4D217A', fontSize: compact ? 15 : 17, fontWeight: '700' }}>
         {name}
       </AccessibilityText>
     </View>

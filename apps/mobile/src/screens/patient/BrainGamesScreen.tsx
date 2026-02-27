@@ -34,43 +34,43 @@ export const BrainGamesScreen = ({ navigation }: Props) => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#F9FAFB' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#B8CEDB' }}>
       <ScrollView contentContainerStyle={{ padding: 16, paddingBottom: 24 }}>
         <Header showBrand brandVariant="medical" title="Games" subtitle="Fun brain activity" />
 
-        <Card style={{ backgroundColor: '#EEF2FF' }}>
-          <AccessibilityText style={{ fontSize: 14, color: '#4B5563' }}>Today</AccessibilityText>
-          <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#111827' }}>
+        <Card style={{ backgroundColor: '#B8CEDB' }}>
+          <AccessibilityText style={{ fontSize: 14, color: '#4D217A' }}>Today</AccessibilityText>
+          <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#4D217A' }}>
             Keep your mind active
           </AccessibilityText>
-          <AccessibilityText style={{ marginTop: 6, fontSize: 14, color: '#374151' }}>{dailyGoalText}</AccessibilityText>
-          <AccessibilityText style={{ marginTop: 4, fontSize: 13, color: '#4B5563' }}>{rewardState.rewardText}</AccessibilityText>
+          <AccessibilityText style={{ marginTop: 6, fontSize: 14, color: '#4D217A' }}>{dailyGoalText}</AccessibilityText>
+          <AccessibilityText style={{ marginTop: 4, fontSize: 13, color: '#4D217A' }}>{rewardState.rewardText}</AccessibilityText>
         </Card>
 
         <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
           <Card style={{ width: '48%', paddingVertical: 14 }}>
-            <AccessibilityText style={{ fontSize: 12, color: '#6B7280' }}>Streak</AccessibilityText>
-            <AccessibilityText style={{ marginTop: 4, fontSize: 20, fontWeight: '700', color: '#111827' }}>{`${streakDays} day${streakDays === 1 ? '' : 's'} 🔥`}</AccessibilityText>
+            <AccessibilityText style={{ fontSize: 12, color: '#4D217A' }}>Streak</AccessibilityText>
+            <AccessibilityText style={{ marginTop: 4, fontSize: 20, fontWeight: '700', color: '#4D217A' }}>{`${streakDays} day${streakDays === 1 ? '' : 's'} 🔥`}</AccessibilityText>
           </Card>
           <Card style={{ width: '48%', paddingVertical: 14 }}>
-            <AccessibilityText style={{ fontSize: 12, color: '#6B7280' }}>Brain Stars</AccessibilityText>
-            <AccessibilityText style={{ marginTop: 4, fontSize: 20, fontWeight: '700', color: '#111827' }}>{`${totalStars} ⭐`}</AccessibilityText>
+            <AccessibilityText style={{ fontSize: 12, color: '#4D217A' }}>Brain Stars</AccessibilityText>
+            <AccessibilityText style={{ marginTop: 4, fontSize: 20, fontWeight: '700', color: '#4D217A' }}>{`${totalStars} ⭐`}</AccessibilityText>
           </Card>
         </View>
 
         <Card style={{ paddingVertical: 14 }}>
-          <AccessibilityText style={{ fontSize: 12, color: '#6B7280' }}>Total sessions completed</AccessibilityText>
-          <AccessibilityText style={{ marginTop: 4, fontSize: 20, fontWeight: '700', color: '#111827' }}>{`${totalSessions}`}</AccessibilityText>
+          <AccessibilityText style={{ fontSize: 12, color: '#4D217A' }}>Total sessions completed</AccessibilityText>
+          <AccessibilityText style={{ marginTop: 4, fontSize: 20, fontWeight: '700', color: '#4D217A' }}>{`${totalSessions}`}</AccessibilityText>
         </Card>
 
         {rewardState.milestoneText ? (
-          <Card style={{ backgroundColor: '#FEF3C7' }}>
-            <AccessibilityText style={{ fontSize: 13, color: '#92400E', fontWeight: '700' }}>Milestone Unlocked</AccessibilityText>
-            <AccessibilityText style={{ marginTop: 4, fontSize: 14, color: '#78350F' }}>{rewardState.milestoneText}</AccessibilityText>
+          <Card style={{ backgroundColor: '#F6E600' }}>
+            <AccessibilityText style={{ fontSize: 13, color: '#4D217A', fontWeight: '700' }}>Milestone Unlocked</AccessibilityText>
+            <AccessibilityText style={{ marginTop: 4, fontSize: 14, color: '#4D217A' }}>{rewardState.milestoneText}</AccessibilityText>
           </Card>
         ) : null}
 
-        <AccessibilityText style={{ marginTop: 6, marginBottom: 10, fontSize: 20, fontWeight: '700', color: '#111827' }}>
+        <AccessibilityText style={{ marginTop: 6, marginBottom: 10, fontSize: 20, fontWeight: '700', color: '#4D217A' }}>
           Game types
         </AccessibilityText>
 
@@ -78,8 +78,8 @@ export const BrainGamesScreen = ({ navigation }: Props) => {
           <Card key={category} style={{ flexDirection: 'row', alignItems: 'center', paddingVertical: 16 }}>
             <AccessibilityText style={{ fontSize: 24, marginRight: 12 }}>{categoryIcon(category)}</AccessibilityText>
             <View style={{ flex: 1 }}>
-              <AccessibilityText style={{ fontSize: 17, fontWeight: '600', color: '#111827' }}>{toLabel(category)}</AccessibilityText>
-              <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#374151' }}>Tap to start a short session</AccessibilityText>
+              <AccessibilityText style={{ fontSize: 17, fontWeight: '600', color: '#4D217A' }}>{toLabel(category)}</AccessibilityText>
+              <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#4D217A' }}>Tap to start a short session</AccessibilityText>
             </View>
             <LargeButton
               label="Start"

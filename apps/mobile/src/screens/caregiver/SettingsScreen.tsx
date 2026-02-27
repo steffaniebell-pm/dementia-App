@@ -79,15 +79,15 @@ export const SettingsScreen = ({ navigation }: Props) => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#F9FAFB' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#B8CEDB' }}>
       <ScrollView contentContainerStyle={{ padding: 16, paddingBottom: 24 }}>
         <Header showBrand brandVariant="spark" title="Settings" subtitle="Simple actions" />
-        <Card style={{ backgroundColor: '#EEF2FF' }}>
-          <AccessibilityText style={{ fontSize: 14, color: '#4B5563' }}>Overview</AccessibilityText>
-          <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#111827' }}>
+        <Card style={{ backgroundColor: '#B8CEDB' }}>
+          <AccessibilityText style={{ fontSize: 14, color: '#4D217A' }}>Overview</AccessibilityText>
+          <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#4D217A' }}>
             Caregiver settings
           </AccessibilityText>
-          <AccessibilityText style={{ marginTop: 6, fontSize: 14, color: '#374151' }}>
+          <AccessibilityText style={{ marginTop: 6, fontSize: 14, color: '#4D217A' }}>
             Use these settings only when needed. Keep daily tasks on Home for a simpler routine.
           </AccessibilityText>
         </Card>
@@ -101,7 +101,7 @@ export const SettingsScreen = ({ navigation }: Props) => {
           placeholder={hasPin ? 'Enter new 4-digit PIN' : 'Enter 4-digit PIN'}
           style={{
             borderWidth: 1,
-            borderColor: '#D1D5DB',
+            borderColor: '#B8CEDB',
             borderRadius: 10,
             paddingHorizontal: 12,
             paddingVertical: 10,
@@ -139,7 +139,7 @@ export const SettingsScreen = ({ navigation }: Props) => {
           placeholder="Name"
           style={{
             borderWidth: 1,
-            borderColor: '#D1D5DB',
+            borderColor: '#B8CEDB',
             borderRadius: 10,
             paddingHorizontal: 12,
             paddingVertical: 10,
@@ -154,7 +154,7 @@ export const SettingsScreen = ({ navigation }: Props) => {
           placeholder="Phone"
           style={{
             borderWidth: 1,
-            borderColor: '#D1D5DB',
+            borderColor: '#B8CEDB',
             borderRadius: 10,
             paddingHorizontal: 12,
             paddingVertical: 10,
@@ -167,7 +167,7 @@ export const SettingsScreen = ({ navigation }: Props) => {
       <InlineToast message={toastMessage} />
       <LargeButton label="Pairing" onPress={() => navigation.navigate('Pairing')} />
       <LargeButton label="Emergency Info" onPress={() => navigation.navigate('EmergencyInfo')} />
-      <LargeButton label="Lock App" onPress={signOut} style={{ backgroundColor: '#DC2626' }} />
+      <LargeButton label="Lock App" onPress={signOut} style={{ backgroundColor: '#F6E600' }} />
       </ScrollView>
     </SafeAreaView>
   );

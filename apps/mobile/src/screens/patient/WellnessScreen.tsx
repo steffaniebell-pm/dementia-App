@@ -28,21 +28,21 @@ export const WellnessScreen = ({ navigation }: Props) => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#F9FAFB' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#B8CEDB' }}>
       <ScrollView contentContainerStyle={{ padding: 16, paddingBottom: 24 }}>
         <Header showBrand brandVariant="medical" title="Wellness" subtitle="Move, stretch, and relax" />
 
-        <Card style={{ backgroundColor: '#EEF2FF' }}>
-          <AccessibilityText style={{ fontSize: 14, color: '#4B5563' }}>Today</AccessibilityText>
-          <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#111827' }}>
+        <Card style={{ backgroundColor: '#B8CEDB' }}>
+          <AccessibilityText style={{ fontSize: 14, color: '#4D217A' }}>Today</AccessibilityText>
+          <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#4D217A' }}>
             Take a wellness break
           </AccessibilityText>
-          <AccessibilityText style={{ marginTop: 6, fontSize: 14, color: '#374151' }}>
+          <AccessibilityText style={{ marginTop: 6, fontSize: 14, color: '#4D217A' }}>
             Choose one short session to support comfort and focus.
           </AccessibilityText>
         </Card>
 
-        <AccessibilityText style={{ marginTop: 6, marginBottom: 10, fontSize: 20, fontWeight: '700', color: '#111827' }}>
+        <AccessibilityText style={{ marginTop: 6, marginBottom: 10, fontSize: 20, fontWeight: '700', color: '#4D217A' }}>
           Sessions
         </AccessibilityText>
 
@@ -53,8 +53,8 @@ export const WellnessScreen = ({ navigation }: Props) => {
           >
             <AccessibilityText style={{ fontSize: 24, marginRight: 12 }}>{getIcon(session.title)}</AccessibilityText>
             <View style={{ flex: 1 }}>
-              <AccessibilityText style={{ fontSize: 17, fontWeight: '600', color: '#111827' }}>{session.title}</AccessibilityText>
-              <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#374151' }}>
+              <AccessibilityText style={{ fontSize: 17, fontWeight: '600', color: '#4D217A' }}>{session.title}</AccessibilityText>
+              <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#4D217A' }}>
                 {`${session.durationMinutes} min`}
               </AccessibilityText>
             </View>

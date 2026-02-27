@@ -49,7 +49,7 @@ export const HomeHubScreen = ({ navigation }: Props) => {
   );
 
   return (
-    <ScrollView contentContainerStyle={{ padding: 16, backgroundColor: '#F9FAFB' }}>
+    <ScrollView contentContainerStyle={{ padding: 16, backgroundColor: '#B8CEDB' }}>
       <View style={{ marginBottom: 12 }}>
         <BrandMark variant="medical" />
       </View>
@@ -65,9 +65,9 @@ export const HomeHubScreen = ({ navigation }: Props) => {
         temperature={weather.temperature}
         condition={weather.condition}
       />
-      <Card style={{ backgroundColor: '#ECFEFF' }}>
-        <AccessibilityText style={{ color: '#374151', fontSize: 16 }}>{`${greeting} 👋`}</AccessibilityText>
-        <AccessibilityText style={{ marginTop: 6, fontSize: 36, fontWeight: '700', color: '#111827' }}>
+      <Card style={{ backgroundColor: '#B8CEDB' }}>
+        <AccessibilityText style={{ color: '#4D217A', fontSize: 16 }}>{`${greeting} 👋`}</AccessibilityText>
+        <AccessibilityText style={{ marginTop: 6, fontSize: 36, fontWeight: '700', color: '#4D217A' }}>
           How are you feeling today?
         </AccessibilityText>
       </Card>
@@ -81,15 +81,15 @@ export const HomeHubScreen = ({ navigation }: Props) => {
         <HomeFeatureTile label="Companion" icon="💬" onPress={() => navigation.navigate('CallCaregiver')} />
       </View>
 
-      <AccessibilityText style={{ marginTop: 8, marginBottom: 12, fontSize: 20, fontWeight: '700', color: '#111827' }}>
+      <AccessibilityText style={{ marginTop: 8, marginBottom: 12, fontSize: 20, fontWeight: '700', color: '#4D217A' }}>
         Today's Summary
       </AccessibilityText>
       <Card style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingVertical: 15 }}>
         <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
-          <SummaryIcon icon="✓" color="#22C55E" />
+          <SummaryIcon icon="✓" color="#27B66D" />
           <View style={{ flex: 1 }}>
-            <AccessibilityText style={{ fontSize: 16, fontWeight: '600', color: '#111827' }}>Medications</AccessibilityText>
-            <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#374151' }}>{`${taken} of ${total} taken`}</AccessibilityText>
+            <AccessibilityText style={{ fontSize: 16, fontWeight: '600', color: '#4D217A' }}>Medications</AccessibilityText>
+            <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#4D217A' }}>{`${taken} of ${total} taken`}</AccessibilityText>
           </View>
         </View>
         <View
@@ -97,7 +97,7 @@ export const HomeHubScreen = ({ navigation }: Props) => {
             width: 76,
             height: 9,
             borderRadius: 999,
-            backgroundColor: '#D1D5DB',
+            backgroundColor: '#B8CEDB',
             overflow: 'hidden',
             marginLeft: 12,
           }}
@@ -107,27 +107,27 @@ export const HomeHubScreen = ({ navigation }: Props) => {
               width: `${progressPercent}%`,
               height: '100%',
               borderRadius: 999,
-              backgroundColor: '#4F46E5',
+              backgroundColor: '#8A00E5',
             }}
           />
         </View>
       </Card>
 
       <Card style={{ flexDirection: 'row', alignItems: 'center', paddingVertical: 15 }}>
-        <SummaryIcon icon="⏰" color="#0EA5E9" />
+        <SummaryIcon icon="⏰" color="#0084E1" />
         <View style={{ flex: 1 }}>
-          <AccessibilityText style={{ fontSize: 16, fontWeight: '600', color: '#111827' }}>Next Appointment</AccessibilityText>
-          <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#374151' }}>
+          <AccessibilityText style={{ fontSize: 16, fontWeight: '600', color: '#4D217A' }}>Next Appointment</AccessibilityText>
+          <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#4D217A' }}>
             {nextEvent ? `${nextEvent.title}${appointmentTime ? ` at ${appointmentTime}` : ''}` : 'No upcoming appointment'}
           </AccessibilityText>
         </View>
       </Card>
 
       <Card style={{ flexDirection: 'row', alignItems: 'center', paddingVertical: 15 }}>
-        <SummaryIcon icon="♡" color="#EF4444" />
+        <SummaryIcon icon="♡" color="#009999" />
         <View style={{ flex: 1 }}>
-          <AccessibilityText style={{ fontSize: 16, fontWeight: '600', color: '#111827' }}>Mood</AccessibilityText>
-          <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#374151' }}>Feeling good today</AccessibilityText>
+          <AccessibilityText style={{ fontSize: 16, fontWeight: '600', color: '#4D217A' }}>Mood</AccessibilityText>
+          <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#4D217A' }}>Feeling good today</AccessibilityText>
         </View>
       </Card>
     </ScrollView>

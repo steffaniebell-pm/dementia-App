@@ -6,12 +6,12 @@ export const Card = ({ style, ...rest }: ViewProps) => {
     <View
       style={[
         {
-          backgroundColor: '#FFFFFF',
+          backgroundColor: '#B8CEDB',
           borderRadius: 12,
           padding: 16,
           marginBottom: 12,
           borderWidth: 1,
-          borderColor: '#E5E7EB',
+          borderColor: '#B8CEDB',
         },
         style,
       ]}

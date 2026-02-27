@@ -67,28 +67,28 @@ export const MedListScreen = () => {
           : 'Planned'
       : 'Paused';
     const statusBackground = !med.active
-      ? '#F3F4F6'
+      ? '#B8CEDB'
       : doseStatus === 'taken'
-        ? '#DCFCE7'
+        ? '#B8CEDB'
         : doseStatus === 'missed'
-          ? '#FEE2E2'
-          : '#E0E7FF';
+          ? '#F6E600'
+          : '#B8CEDB';
     const statusColor = !med.active
-      ? '#4B5563'
+      ? '#4D217A'
       : doseStatus === 'taken'
-        ? '#166534'
+        ? '#27B66D'
         : doseStatus === 'missed'
-          ? '#991B1B'
-          : '#3730A3';
+          ? '#4D217A'
+          : '#4D217A';
 
     return (
       <Card key={med.id} style={{ flexDirection: 'row', alignItems: 'center', paddingVertical: 16 }}>
         <AccessibilityText style={{ fontSize: 24, marginRight: 12 }}>💊</AccessibilityText>
         <View style={{ flex: 1 }}>
-          <AccessibilityText style={{ fontSize: 17, fontWeight: '600', color: '#111827' }}>{med.name}</AccessibilityText>
-          <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#374151' }}>{`${med.dose} • ${med.scheduleTime}`}</AccessibilityText>
+          <AccessibilityText style={{ fontSize: 17, fontWeight: '600', color: '#4D217A' }}>{med.name}</AccessibilityText>
+          <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#4D217A' }}>{`${med.dose} • ${med.scheduleTime}`}</AccessibilityText>
           {med.instructions ? (
-            <AccessibilityText style={{ marginTop: 2, fontSize: 12, color: '#6B7280' }}>{med.instructions}</AccessibilityText>
+            <AccessibilityText style={{ marginTop: 2, fontSize: 12, color: '#4D217A' }}>{med.instructions}</AccessibilityText>
           ) : null}
         </View>
         <Pressable
@@ -124,51 +124,51 @@ export const MedListScreen = () => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#F9FAFB' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#B8CEDB' }}>
       <ScrollView contentContainerStyle={{ padding: 16, paddingBottom: 24 }}>
         <Header showBrand brandVariant="medical" title="Medicines" subtitle="Simple daily plan" />
 
-        <Card style={{ backgroundColor: '#EEF2FF' }}>
-          <AccessibilityText style={{ fontSize: 14, color: '#4B5563' }}>Today</AccessibilityText>
-          <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#111827' }}>
+        <Card style={{ backgroundColor: '#B8CEDB' }}>
+          <AccessibilityText style={{ fontSize: 14, color: '#4D217A' }}>Today</AccessibilityText>
+          <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#4D217A' }}>
             {`${activeCount} active medicine${activeCount === 1 ? '' : 's'}`}
           </AccessibilityText>
-          <AccessibilityText style={{ marginTop: 6, fontSize: 14, color: '#374151' }}>
+          <AccessibilityText style={{ marginTop: 6, fontSize: 14, color: '#4D217A' }}>
             {dueMedication
               ? `Next dose: ${dueMedication.name} at ${dueMedication.scheduleTime}`
               : 'No medicine due right now'}
           </AccessibilityText>
         </Card>
 
-        <AccessibilityText style={{ marginTop: 6, marginBottom: 10, fontSize: 20, fontWeight: '700', color: '#111827' }}>
+        <AccessibilityText style={{ marginTop: 6, marginBottom: 10, fontSize: 20, fontWeight: '700', color: '#4D217A' }}>
           Your medicines
         </AccessibilityText>
 
         {meds.length === 0 ? (
           <Card>
-            <AccessibilityText style={{ fontSize: 16, color: '#374151' }}>No medicines listed yet.</AccessibilityText>
+            <AccessibilityText style={{ fontSize: 16, color: '#4D217A' }}>No medicines listed yet.</AccessibilityText>
           </Card>
         ) : null}
 
-        <AccessibilityText style={{ marginTop: 4, marginBottom: 8, fontSize: 16, fontWeight: '700', color: '#374151' }}>
+        <AccessibilityText style={{ marginTop: 4, marginBottom: 8, fontSize: 16, fontWeight: '700', color: '#4D217A' }}>
           AM
         </AccessibilityText>
         {amMeds.length > 0 ? (
           amMeds.map((med) => renderMedicationCard(med.id))
         ) : (
           <Card>
-            <AccessibilityText style={{ fontSize: 14, color: '#6B7280' }}>No morning medicines planned.</AccessibilityText>
+            <AccessibilityText style={{ fontSize: 14, color: '#4D217A' }}>No morning medicines planned.</AccessibilityText>
           </Card>
         )}
 
-        <AccessibilityText style={{ marginTop: 10, marginBottom: 8, fontSize: 16, fontWeight: '700', color: '#374151' }}>
+        <AccessibilityText style={{ marginTop: 10, marginBottom: 8, fontSize: 16, fontWeight: '700', color: '#4D217A' }}>
           PM
         </AccessibilityText>
         {pmMeds.length > 0 ? (
           pmMeds.map((med) => renderMedicationCard(med.id))
         ) : (
           <Card>
-            <AccessibilityText style={{ fontSize: 14, color: '#6B7280' }}>No evening medicines planned.</AccessibilityText>
+            <AccessibilityText style={{ fontSize: 14, color: '#4D217A' }}>No evening medicines planned.</AccessibilityText>
           </Card>
         )}
       </ScrollView>

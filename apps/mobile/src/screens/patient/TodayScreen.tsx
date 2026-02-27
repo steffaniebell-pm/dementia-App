@@ -45,50 +45,50 @@ export const TodayScreen = () => {
   });
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#F9FAFB' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#B8CEDB' }}>
       <ScrollView contentContainerStyle={{ padding: 16, paddingBottom: 24 }}>
         <Header showBrand brandVariant="medical" title="Calendar" subtitle="Today at a glance" />
 
-        <Card style={{ backgroundColor: '#EEF2FF' }}>
-          <AccessibilityText style={{ fontSize: 14, color: '#4B5563' }}>Today</AccessibilityText>
-          <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#111827' }}>
+        <Card style={{ backgroundColor: '#B8CEDB' }}>
+          <AccessibilityText style={{ fontSize: 14, color: '#4D217A' }}>Today</AccessibilityText>
+          <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#4D217A' }}>
             {todayLabel}
           </AccessibilityText>
         </Card>
 
-        <AccessibilityText style={{ marginTop: 6, marginBottom: 10, fontSize: 20, fontWeight: '700', color: '#111827' }}>
+        <AccessibilityText style={{ marginTop: 6, marginBottom: 10, fontSize: 20, fontWeight: '700', color: '#4D217A' }}>
           Next up
         </AccessibilityText>
         <Card style={{ flexDirection: 'row', alignItems: 'center', paddingVertical: 16 }}>
-          <AccessibilityText style={{ fontSize: 24, marginRight: 12, color: '#2563EB' }}>⏰</AccessibilityText>
+          <AccessibilityText style={{ fontSize: 24, marginRight: 12, color: '#8A00E5' }}>⏰</AccessibilityText>
           <View style={{ flex: 1 }}>
-            <AccessibilityText style={{ fontSize: 16, fontWeight: '600', color: '#111827' }}>
+            <AccessibilityText style={{ fontSize: 16, fontWeight: '600', color: '#4D217A' }}>
               {nextEvent ? nextEvent.title : 'No events planned'}
             </AccessibilityText>
-            <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#374151' }}>
+            <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#4D217A' }}>
               {nextEvent ? formatTime(nextEvent.whenIso) || getTypeLabel(nextEvent.type) : 'Enjoy your free time'}
             </AccessibilityText>
           </View>
         </Card>
 
-        <AccessibilityText style={{ marginTop: 6, marginBottom: 10, fontSize: 20, fontWeight: '700', color: '#111827' }}>
+        <AccessibilityText style={{ marginTop: 6, marginBottom: 10, fontSize: 20, fontWeight: '700', color: '#4D217A' }}>
           Today’s schedule
         </AccessibilityText>
         {events.length === 0 ? (
           <Card>
-            <AccessibilityText style={{ fontSize: 16, color: '#374151' }}>No events today.</AccessibilityText>
+            <AccessibilityText style={{ fontSize: 16, color: '#4D217A' }}>No events today.</AccessibilityText>
           </Card>
         ) : (
           events.map((event) => (
             <Card key={event.id} style={{ flexDirection: 'row', alignItems: 'center', paddingVertical: 16 }}>
               <AccessibilityText style={{ fontSize: 24, marginRight: 12 }}>{getTypeIcon(event.type)}</AccessibilityText>
               <View style={{ flex: 1 }}>
-                <AccessibilityText style={{ fontSize: 16, fontWeight: '600', color: '#111827' }}>{event.title}</AccessibilityText>
-                <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#374151' }}>
+                <AccessibilityText style={{ fontSize: 16, fontWeight: '600', color: '#4D217A' }}>{event.title}</AccessibilityText>
+                <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#4D217A' }}>
                   {`${getTypeLabel(event.type)}${formatTime(event.whenIso) ? ` • ${formatTime(event.whenIso)}` : ''}`}
                 </AccessibilityText>
                 {event.location ? (
-                  <AccessibilityText style={{ marginTop: 2, fontSize: 12, color: '#6B7280' }}>{event.location}</AccessibilityText>
+                  <AccessibilityText style={{ marginTop: 2, fontSize: 12, color: '#4D217A' }}>{event.location}</AccessibilityText>
                 ) : null}
               </View>
             </Card>

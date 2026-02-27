@@ -18,9 +18,9 @@ export const Header = ({ title, subtitle, showBrand = false, brandVariant = 'med
           <BrandMark compact variant={brandVariant} />
         </View>
       ) : null}
-      <AccessibilityText style={{ fontSize: 28, fontWeight: '700', color: '#111827' }}>{title}</AccessibilityText>
+      <AccessibilityText style={{ fontSize: 28, fontWeight: '700', color: '#4D217A' }}>{title}</AccessibilityText>
       {subtitle ? (
-        <AccessibilityText style={{ fontSize: 15, color: '#4B5563', marginTop: 6, lineHeight: 21 }}>
+        <AccessibilityText style={{ fontSize: 15, color: '#4D217A', marginTop: 6, lineHeight: 21 }}>
           {subtitle}
         </AccessibilityText>
       ) : null}

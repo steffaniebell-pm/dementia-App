@@ -31,15 +31,15 @@ export const MedNowScreen = () => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, padding: 16, backgroundColor: '#F9FAFB' }}>
+    <SafeAreaView style={{ flex: 1, padding: 16, backgroundColor: '#B8CEDB' }}>
       <Header showBrand brandVariant="medical" title="Medicine now" subtitle={dueMedication ? 'One step at a time' : 'No medicine due now'} />
 
-      <Card style={{ backgroundColor: '#EEF2FF' }}>
-        <AccessibilityText style={{ fontSize: 14, color: '#4B5563' }}>Right now</AccessibilityText>
-        <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#111827' }}>
+      <Card style={{ backgroundColor: '#B8CEDB' }}>
+        <AccessibilityText style={{ fontSize: 14, color: '#4D217A' }}>Right now</AccessibilityText>
+        <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#4D217A' }}>
           {dueMedication ? 'Medicine reminder' : 'All set'}
         </AccessibilityText>
-        <AccessibilityText style={{ marginTop: 6, fontSize: 14, color: '#374151' }}>
+        <AccessibilityText style={{ marginTop: 6, fontSize: 14, color: '#4D217A' }}>
           {dueMedication ? `It's time for ${dueMedication.name}.` : 'No medicine is due at the moment.'}
         </AccessibilityText>
       </Card>
@@ -48,18 +48,18 @@ export const MedNowScreen = () => {
         <Card style={{ flexDirection: 'row', alignItems: 'center', paddingVertical: 16 }}>
           <AccessibilityText style={{ fontSize: 24, marginRight: 12 }}>💊</AccessibilityText>
           <View style={{ flex: 1 }}>
-            <AccessibilityText style={{ fontSize: 18, fontWeight: '700', color: '#111827' }}>{dueMedication.name}</AccessibilityText>
-            <AccessibilityText style={{ marginTop: 3, fontSize: 13, color: '#374151' }}>{`${dueMedication.dose} • ${dueMedication.scheduleTime}`}</AccessibilityText>
+            <AccessibilityText style={{ fontSize: 18, fontWeight: '700', color: '#4D217A' }}>{dueMedication.name}</AccessibilityText>
+            <AccessibilityText style={{ marginTop: 3, fontSize: 13, color: '#4D217A' }}>{`${dueMedication.dose} • ${dueMedication.scheduleTime}`}</AccessibilityText>
           </View>
         </Card>
       ) : (
         <Card>
-          <AccessibilityText style={{ fontSize: 16, color: '#374151' }}>You can return later for your next reminder.</AccessibilityText>
+          <AccessibilityText style={{ fontSize: 16, color: '#4D217A' }}>You can return later for your next reminder.</AccessibilityText>
         </Card>
       )}
 
       {dueMedication ? (
-        <AccessibilityText style={{ marginTop: 6, marginBottom: 10, fontSize: 20, fontWeight: '700', color: '#111827' }}>
+        <AccessibilityText style={{ marginTop: 6, marginBottom: 10, fontSize: 20, fontWeight: '700', color: '#4D217A' }}>
           What would you like to do?
         </AccessibilityText>
       ) : null}

@@ -13,9 +13,9 @@ type Props = {
 export const NextActionCard = ({ title, dueText, ctaLabel, onPress }: Props) => {
   return (
     <Card>
-      <AccessibilityText style={{ fontSize: 14, color: '#6B7280' }}>Next Action</AccessibilityText>
+      <AccessibilityText style={{ fontSize: 14, color: '#4D217A' }}>Next Action</AccessibilityText>
       <AccessibilityText style={{ fontSize: 24, fontWeight: '700', marginTop: 4 }}>{title}</AccessibilityText>
-      <AccessibilityText style={{ fontSize: 16, color: '#374151', marginTop: 4 }}>{dueText}</AccessibilityText>
+      <AccessibilityText style={{ fontSize: 16, color: '#4D217A', marginTop: 4 }}>{dueText}</AccessibilityText>
       <LargeButton label={ctaLabel} onPress={onPress} style={{ marginTop: 12, marginBottom: 0 }} />
     </Card>
   );

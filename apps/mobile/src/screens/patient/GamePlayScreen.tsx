@@ -93,21 +93,21 @@ export const GamePlayScreen = ({ route }: Props) => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, padding: 16, backgroundColor: '#F9FAFB' }}>
+    <SafeAreaView style={{ flex: 1, padding: 16, backgroundColor: '#B8CEDB' }}>
       <Header showBrand brandVariant="medical" title="Play today" subtitle="Great focus today" />
 
-      <Card style={{ backgroundColor: '#EEF2FF' }}>
-        <AccessibilityText style={{ fontSize: 14, color: '#4B5563' }}>Session</AccessibilityText>
-        <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#111827' }}>
+      <Card style={{ backgroundColor: '#B8CEDB' }}>
+        <AccessibilityText style={{ fontSize: 14, color: '#4D217A' }}>Session</AccessibilityText>
+        <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#4D217A' }}>
           {gameTitle}
         </AccessibilityText>
-        <AccessibilityText style={{ marginTop: 6, fontSize: 14, color: '#374151' }}>{gameSubtitle}</AccessibilityText>
+        <AccessibilityText style={{ marginTop: 6, fontSize: 14, color: '#4D217A' }}>{gameSubtitle}</AccessibilityText>
       </Card>
 
       {isProblemSolvingGame ? (
         <Card style={{ paddingVertical: 12 }}>
-          <AccessibilityText style={{ fontSize: 14, color: '#4B5563' }}>Dementia-friendly puzzle</AccessibilityText>
-          <AccessibilityText style={{ marginTop: 4, fontSize: 15, color: '#111827' }}>
+          <AccessibilityText style={{ fontSize: 14, color: '#4D217A' }}>Dementia-friendly puzzle</AccessibilityText>
+          <AccessibilityText style={{ marginTop: 4, fontSize: 15, color: '#4D217A' }}>
             {puzzleSolved
               ? `Puzzle complete in ${moveCount} move${moveCount === 1 ? '' : 's'} 🎉`
               : 'Tap one tile, then another tile, to swap positions.'}
@@ -129,8 +129,8 @@ export const GamePlayScreen = ({ route }: Props) => {
                     minHeight: 110,
                     borderRadius: 12,
                     borderWidth: 2,
-                    borderColor: isSelected ? '#2563EB' : '#CBD5E1',
-                    backgroundColor: isSelected ? '#DBEAFE' : '#FFFFFF',
+                    borderColor: isSelected ? '#8A00E5' : '#B8CEDB',
+                    backgroundColor: isSelected ? '#B8CEDB' : '#B8CEDB',
                     marginBottom: 10,
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -138,7 +138,7 @@ export const GamePlayScreen = ({ route }: Props) => {
                   }}
                 >
                   <AccessibilityText style={{ fontSize: 36 }}>{tile.icon}</AccessibilityText>
-                  <AccessibilityText style={{ marginTop: 6, fontSize: 13, color: '#374151' }}>{tile.label}</AccessibilityText>
+                  <AccessibilityText style={{ marginTop: 6, fontSize: 13, color: '#4D217A' }}>{tile.label}</AccessibilityText>
                 </TouchableOpacity>
               );
             })}
@@ -150,19 +150,19 @@ export const GamePlayScreen = ({ route }: Props) => {
         <Card style={{ flexDirection: 'row', alignItems: 'center', paddingVertical: 16 }}>
           <AccessibilityText style={{ fontSize: 24, marginRight: 12 }}>{isCompleted ? '✅' : '🎮'}</AccessibilityText>
           <View style={{ flex: 1 }}>
-            <AccessibilityText style={{ fontSize: 17, fontWeight: '600', color: '#111827' }}>
+            <AccessibilityText style={{ fontSize: 17, fontWeight: '600', color: '#4D217A' }}>
               {isCompleted ? 'Completed' : 'In progress'}
             </AccessibilityText>
-            <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#374151' }}>
+            <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#4D217A' }}>
               {isCompleted ? 'Your points are saved.' : 'Finish when you are ready.'}
             </AccessibilityText>
           </View>
         </Card>
       )}
 
-      <Card style={{ backgroundColor: '#ECFEFF' }}>
-        <AccessibilityText style={{ fontSize: 14, color: '#0F766E' }}>Your momentum</AccessibilityText>
-        <AccessibilityText style={{ marginTop: 4, fontSize: 16, color: '#134E4A', fontWeight: '600' }}>{summaryText}</AccessibilityText>
+      <Card style={{ backgroundColor: '#B8CEDB' }}>
+        <AccessibilityText style={{ fontSize: 14, color: '#009999' }}>Your momentum</AccessibilityText>
+        <AccessibilityText style={{ marginTop: 4, fontSize: 16, color: '#009999', fontWeight: '600' }}>{summaryText}</AccessibilityText>
       </Card>
 
       <LargeButton
@@ -173,13 +173,13 @@ export const GamePlayScreen = ({ route }: Props) => {
       <InlineToast message={toastMessage} />
 
       <Card>
-        <AccessibilityText style={{ fontSize: 16, color: '#111827' }}>{rewardText}</AccessibilityText>
+        <AccessibilityText style={{ fontSize: 16, color: '#4D217A' }}>{rewardText}</AccessibilityText>
       </Card>
 
       {isCompleted && milestoneText ? (
-        <Card style={{ backgroundColor: '#FEF3C7' }}>
-          <AccessibilityText style={{ fontSize: 14, color: '#78350F', fontWeight: '700' }}>Streak Milestone</AccessibilityText>
-          <AccessibilityText style={{ marginTop: 4, fontSize: 14, color: '#92400E' }}>{milestoneText}</AccessibilityText>
+        <Card style={{ backgroundColor: '#F6E600' }}>
+          <AccessibilityText style={{ fontSize: 14, color: '#4D217A', fontWeight: '700' }}>Streak Milestone</AccessibilityText>
+          <AccessibilityText style={{ marginTop: 4, fontSize: 14, color: '#4D217A' }}>{milestoneText}</AccessibilityText>
         </Card>
       ) : null}
     </SafeAreaView>

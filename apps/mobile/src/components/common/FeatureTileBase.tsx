@@ -16,9 +16,9 @@ export const FeatureTileBase = ({ label, icon, onPress }: Props) => {
       accessibilityLabel={label}
       style={{
         width: '48%',
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#B8CEDB',
         borderWidth: 1,
-        borderColor: '#E5E7EB',
+        borderColor: '#B8CEDB',
         borderRadius: 16,
         paddingVertical: 18,
         paddingHorizontal: 14,
@@ -31,14 +31,14 @@ export const FeatureTileBase = ({ label, icon, onPress }: Props) => {
           width: 50,
           height: 50,
           borderRadius: 12,
-          backgroundColor: '#EEF2FF',
+          backgroundColor: '#B8CEDB',
           alignItems: 'center',
           justifyContent: 'center',
         }}
       >
         <AccessibilityText style={{ fontSize: 22 }}>{icon}</AccessibilityText>
       </View>
-      <AccessibilityText style={{ marginTop: 12, fontSize: 18, fontWeight: '600', color: '#111827' }}>
+      <AccessibilityText style={{ marginTop: 12, fontSize: 18, fontWeight: '600', color: '#4D217A' }}>
         {label}
       </AccessibilityText>
     </Pressable>

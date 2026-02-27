@@ -18,15 +18,15 @@ export const DashboardScreen = ({ navigation }: Props) => {
   const escalations = getEscalationEvents(30);
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#F9FAFB' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#B8CEDB' }}>
       <ScrollView contentContainerStyle={{ padding: 16, paddingBottom: 24 }}>
         <Header showBrand brandVariant="spark" title="Caregiver Home" subtitle="Daily support" />
-        <Card style={{ backgroundColor: '#EEF2FF' }}>
-          <AccessibilityText style={{ fontSize: 14, color: '#4B5563' }}>Today</AccessibilityText>
-          <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#111827' }}>
+        <Card style={{ backgroundColor: '#B8CEDB' }}>
+          <AccessibilityText style={{ fontSize: 14, color: '#4D217A' }}>Today</AccessibilityText>
+          <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#4D217A' }}>
             Care overview
           </AccessibilityText>
-          <AccessibilityText style={{ marginTop: 6, fontSize: 14, color: '#374151' }}>
+          <AccessibilityText style={{ marginTop: 6, fontSize: 14, color: '#4D217A' }}>
             {`Missed reminders: ${escalations.length}`}
           </AccessibilityText>
         </Card>
@@ -34,19 +34,19 @@ export const DashboardScreen = ({ navigation }: Props) => {
           <AccessibilityText style={{ fontSize: 24, marginRight: 12 }}>💊</AccessibilityText>
           <View style={{ flex: 1 }}>
             <AccessibilityText style={{ fontWeight: '700', fontSize: 16 }}>Medication progress (7 days)</AccessibilityText>
-            <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#374151' }}>{`${adherence.rate}% taken`}</AccessibilityText>
+            <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#4D217A' }}>{`${adherence.rate}% taken`}</AccessibilityText>
           </View>
         </Card>
         <Card style={{ flexDirection: 'row', alignItems: 'center', paddingVertical: 16 }}>
           <AccessibilityText style={{ fontSize: 24, marginRight: 12 }}>🗓️</AccessibilityText>
           <View style={{ flex: 1 }}>
             <AccessibilityText style={{ fontWeight: '700', fontSize: 16 }}>Next appointment</AccessibilityText>
-            <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#374151' }}>
+            <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#4D217A' }}>
               {nextEvent ? nextEvent.title : 'No upcoming events'}
             </AccessibilityText>
           </View>
         </Card>
-        <AccessibilityText style={{ marginTop: 6, marginBottom: 10, fontSize: 20, fontWeight: '700', color: '#111827' }}>
+        <AccessibilityText style={{ marginTop: 6, marginBottom: 10, fontSize: 20, fontWeight: '700', color: '#4D217A' }}>
           Actions
         </AccessibilityText>
         <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>

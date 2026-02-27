@@ -31,26 +31,26 @@ export const WellnessSessionPlayerScreen = () => {
   const statusIcon = state === 'done' ? '✅' : state === 'paused' ? '⏸️' : state === 'running' ? '🟢' : '🌿';
 
   return (
-    <SafeAreaView style={{ flex: 1, padding: 16, backgroundColor: '#F9FAFB' }}>
+    <SafeAreaView style={{ flex: 1, padding: 16, backgroundColor: '#B8CEDB' }}>
       <Header showBrand brandVariant="medical" title="Wellness session" subtitle="Stop anytime. Your comfort comes first." />
 
-      <Card style={{ backgroundColor: '#EEF2FF' }}>
-        <AccessibilityText style={{ fontSize: 14, color: '#4B5563' }}>Session</AccessibilityText>
-        <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#111827' }}>
+      <Card style={{ backgroundColor: '#B8CEDB' }}>
+        <AccessibilityText style={{ fontSize: 14, color: '#4D217A' }}>Session</AccessibilityText>
+        <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#4D217A' }}>
           Gentle wellness
         </AccessibilityText>
-        <AccessibilityText style={{ marginTop: 6, fontSize: 14, color: '#374151' }}>{statusText}</AccessibilityText>
+        <AccessibilityText style={{ marginTop: 6, fontSize: 14, color: '#4D217A' }}>{statusText}</AccessibilityText>
       </Card>
 
       <Card style={{ flexDirection: 'row', alignItems: 'center', paddingVertical: 16 }}>
         <AccessibilityText style={{ fontSize: 24, marginRight: 12 }}>{statusIcon}</AccessibilityText>
         <View style={{ flex: 1 }}>
-          <AccessibilityText style={{ fontSize: 17, fontWeight: '600', color: '#111827' }}>{statusTitle}</AccessibilityText>
-          <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#374151' }}>{statusText}</AccessibilityText>
+          <AccessibilityText style={{ fontSize: 17, fontWeight: '600', color: '#4D217A' }}>{statusTitle}</AccessibilityText>
+          <AccessibilityText style={{ marginTop: 2, fontSize: 13, color: '#4D217A' }}>{statusText}</AccessibilityText>
         </View>
       </Card>
 
-      <AccessibilityText style={{ marginTop: 6, marginBottom: 10, fontSize: 20, fontWeight: '700', color: '#111827' }}>
+      <AccessibilityText style={{ marginTop: 6, marginBottom: 10, fontSize: 20, fontWeight: '700', color: '#4D217A' }}>
         Controls
       </AccessibilityText>
       <LargeButton label="Start" onPress={() => setState('running')} />

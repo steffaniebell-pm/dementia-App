@@ -16,7 +16,7 @@ export const LargeButton = ({ label, onPress, style, disabled = false }: Props) 
       disabled={disabled}
       style={[
         {
-          backgroundColor: disabled ? '#93C5FD' : '#2563EB',
+          backgroundColor: disabled ? '#B8CEDB' : '#8A00E5',
           borderRadius: 12,
           paddingVertical: 16,
           paddingHorizontal: 18,
@@ -30,7 +30,7 @@ export const LargeButton = ({ label, onPress, style, disabled = false }: Props) 
       accessibilityLabel={label}
       accessibilityState={{ disabled }}
     >
-      <AccessibilityText style={{ color: '#FFFFFF', fontSize: 18, fontWeight: '600' }}>
+      <AccessibilityText style={{ color: '#B8CEDB', fontSize: 18, fontWeight: '600' }}>
         {label}
       </AccessibilityText>
     </Pressable>

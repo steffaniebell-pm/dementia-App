@@ -12,7 +12,7 @@ type Props = {
 export const WeatherInfoCard = ({ icon, location, temperature, condition }: Props) => {
   return (
     <Card style={{ paddingVertical: 10 }}>
-      <AccessibilityText numberOfLines={1} style={{ fontSize: 14, color: '#6B7280' }}>
+      <AccessibilityText numberOfLines={1} style={{ fontSize: 14, color: '#4D217A' }}>
         {`${icon} ${location} • ${temperature} • ${condition}`}
       </AccessibilityText>
     </Card>
