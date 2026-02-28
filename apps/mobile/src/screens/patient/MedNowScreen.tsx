@@ -31,10 +31,10 @@ export const MedNowScreen = () => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, padding: 16, backgroundColor: '#B8CEDB' }}>
+    <SafeAreaView style={{ flex: 1, padding: 16, backgroundColor: '#FFFFFF' }}>
       <Header showBrand brandVariant="medical" title="Medicine now" subtitle={dueMedication ? 'One step at a time' : 'No medicine due now'} />
 
-      <Card style={{ backgroundColor: '#B8CEDB' }}>
+      <Card style={{ backgroundColor: '#FFFFFF' }}>
         <AccessibilityText style={{ fontSize: 14, color: '#4D217A' }}>Right now</AccessibilityText>
         <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#4D217A' }}>
           {dueMedication ? 'Medicine reminder' : 'All set'}

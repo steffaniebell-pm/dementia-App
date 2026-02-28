@@ -31,10 +31,10 @@ export const WellnessSessionPlayerScreen = () => {
   const statusIcon = state === 'done' ? '✅' : state === 'paused' ? '⏸️' : state === 'running' ? '🟢' : '🌿';
 
   return (
-    <SafeAreaView style={{ flex: 1, padding: 16, backgroundColor: '#B8CEDB' }}>
+    <SafeAreaView style={{ flex: 1, padding: 16, backgroundColor: '#FFFFFF' }}>
       <Header showBrand brandVariant="medical" title="Wellness session" subtitle="Stop anytime. Your comfort comes first." />
 
-      <Card style={{ backgroundColor: '#B8CEDB' }}>
+      <Card style={{ backgroundColor: '#FFFFFF' }}>
         <AccessibilityText style={{ fontSize: 14, color: '#4D217A' }}>Session</AccessibilityText>
         <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#4D217A' }}>
           Gentle wellness

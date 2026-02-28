@@ -18,10 +18,10 @@ export const DashboardScreen = ({ navigation }: Props) => {
   const escalations = getEscalationEvents(30);
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#B8CEDB' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#FFFFFF' }}>
       <ScrollView contentContainerStyle={{ padding: 16, paddingBottom: 24 }}>
         <Header showBrand brandVariant="spark" title="Caregiver Home" subtitle="Daily support" />
-        <Card style={{ backgroundColor: '#B8CEDB' }}>
+        <Card style={{ backgroundColor: '#FFFFFF' }}>
           <AccessibilityText style={{ fontSize: 14, color: '#4D217A' }}>Today</AccessibilityText>
           <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#4D217A' }}>
             Care overview

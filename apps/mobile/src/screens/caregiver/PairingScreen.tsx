@@ -23,10 +23,10 @@ export const PairingScreen = () => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#B8CEDB' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#FFFFFF' }}>
       <ScrollView contentContainerStyle={{ padding: 16, paddingBottom: 24 }}>
         <Header showBrand brandVariant="spark" title="Pairing" subtitle="Invite code workflow" />
-        <Card style={{ backgroundColor: '#B8CEDB' }}>
+        <Card style={{ backgroundColor: '#FFFFFF' }}>
           <AccessibilityText style={{ fontSize: 14, color: '#4D217A' }}>Status</AccessibilityText>
           <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#4D217A' }}>
             {profile.caregiverLinked ? 'Connected' : 'Not connected'}

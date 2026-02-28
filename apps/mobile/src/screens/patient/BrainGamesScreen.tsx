@@ -34,11 +34,11 @@ export const BrainGamesScreen = ({ navigation }: Props) => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#B8CEDB' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#FFFFFF' }}>
       <ScrollView contentContainerStyle={{ padding: 16, paddingBottom: 24 }}>
         <Header showBrand brandVariant="medical" title="Games" subtitle="Fun brain activity" />
 
-        <Card style={{ backgroundColor: '#B8CEDB' }}>
+        <Card style={{ backgroundColor: '#FFFFFF' }}>
           <AccessibilityText style={{ fontSize: 14, color: '#4D217A' }}>Today</AccessibilityText>
           <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#4D217A' }}>
             Keep your mind active

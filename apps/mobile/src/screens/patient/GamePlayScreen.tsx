@@ -93,10 +93,10 @@ export const GamePlayScreen = ({ route }: Props) => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, padding: 16, backgroundColor: '#B8CEDB' }}>
+    <SafeAreaView style={{ flex: 1, padding: 16, backgroundColor: '#FFFFFF' }}>
       <Header showBrand brandVariant="medical" title="Play today" subtitle="Great focus today" />
 
-      <Card style={{ backgroundColor: '#B8CEDB' }}>
+      <Card style={{ backgroundColor: '#FFFFFF' }}>
         <AccessibilityText style={{ fontSize: 14, color: '#4D217A' }}>Session</AccessibilityText>
         <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#4D217A' }}>
           {gameTitle}
@@ -160,7 +160,7 @@ export const GamePlayScreen = ({ route }: Props) => {
         </Card>
       )}
 
-      <Card style={{ backgroundColor: '#B8CEDB' }}>
+      <Card style={{ backgroundColor: '#FFFFFF' }}>
         <AccessibilityText style={{ fontSize: 14, color: '#009999' }}>Your momentum</AccessibilityText>
         <AccessibilityText style={{ marginTop: 4, fontSize: 16, color: '#009999', fontWeight: '600' }}>{summaryText}</AccessibilityText>
       </Card>

@@ -49,7 +49,7 @@ export const HomeHubScreen = ({ navigation }: Props) => {
   );
 
   return (
-    <ScrollView contentContainerStyle={{ padding: 16, backgroundColor: '#B8CEDB' }}>
+    <ScrollView contentContainerStyle={{ padding: 16, backgroundColor: '#FFFFFF' }}>
       <View style={{ marginBottom: 12 }}>
         <BrandMark variant="medical" />
       </View>
@@ -65,7 +65,7 @@ export const HomeHubScreen = ({ navigation }: Props) => {
         temperature={weather.temperature}
         condition={weather.condition}
       />
-      <Card style={{ backgroundColor: '#B8CEDB' }}>
+      <Card style={{ backgroundColor: '#FFFFFF' }}>
         <AccessibilityText style={{ color: '#4D217A', fontSize: 16 }}>{`${greeting} 👋`}</AccessibilityText>
         <AccessibilityText style={{ marginTop: 6, fontSize: 36, fontWeight: '700', color: '#4D217A' }}>
           How are you feeling today?
@@ -97,7 +97,7 @@ export const HomeHubScreen = ({ navigation }: Props) => {
             width: 76,
             height: 9,
             borderRadius: 999,
-            backgroundColor: '#B8CEDB',
+            backgroundColor: '#FFFFFF',
             overflow: 'hidden',
             marginLeft: 12,
           }}

@@ -96,10 +96,10 @@ export const ManageMedsScreen = () => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#B8CEDB' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#FFFFFF' }}>
       <ScrollView contentContainerStyle={{ padding: 16 }}>
         <Header showBrand brandVariant="spark" title="Manage Medications" subtitle="Add and edit schedules" />
-        <Card style={{ backgroundColor: '#B8CEDB' }}>
+        <Card style={{ backgroundColor: '#FFFFFF' }}>
           <AccessibilityText style={{ fontSize: 14, color: '#4D217A' }}>Overview</AccessibilityText>
           <AccessibilityText style={{ marginTop: 4, fontSize: 22, fontWeight: '700', color: '#4D217A' }}>
             {`${meds.length} medicine${meds.length === 1 ? '' : 's'}`}
